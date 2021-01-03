@@ -1,0 +1,120 @@
+body {
+    background-color: #8BA1BB;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+#conteneur {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+                "description description"
+                "colonne1 colonne2";
+
+    height: 100vh;
+    margin: 0 10% 0 10%;
+    background-color: #fff;
+    overflow: auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#description {
+    grid-area: description;
+    margin: 0px 5% 0 5%;
+
+}
+.colonne1 {
+    grid-area: colonne1;
+}
+.colonne2 {
+    grid-area: colonne2;
+}
+#categorie {
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    background-color: #8BA1BB;
+    color: #fff;
+    text-transform: uppercase;
+}
+#entete {
+    text-align: center;
+}
+#entete h1 {
+    text-transform: uppercase;
+}
+hr {
+    border: dotted #8BA1BB 6px;
+    width: 10%;
+    border-bottom: none;
+    margin: 20px auto;
+}
+#recette {
+    position: relative;
+}
+#recette img {
+    width: 100%;
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+    min-height: 200px;
+    background-color: #8BA1BB;
+}
+table {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #6c829dc0;
+    height: 80px;
+}
+table td {
+    vertical-align: top;
+    text-align: center;
+    font-size: 14px;
+}
+table th {
+    font-size: 16px;
+    vertical-align: bottom;
+    padding-bottom: 8px;
+}
+.col {
+    margin: 20px 5% 0 5%;
+}
+.col h2{
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 5px solid #6c829d;
+    padding-bottom: 5px;
+}
+.col ul {
+    padding: 0;
+    list-style-type: none;
+}
+.col ul li {
+    text-align: center;
+    border: 1px solid #6c829d;
+    margin: 5px;
+    padding: 5px 0;
+}
+.col ol {
+    padding: 0;
+    list-style-type: none;
+    counter-reset: item;
+}
+.col ol li {
+    counter-increment: item;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.col ol li:before {
+    margin: 10px;
+    padding: 2px;
+    content: counter(item);
+    background-color: #6c829d;
+    border-radius: 100%;
+    color: white;
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
+}
