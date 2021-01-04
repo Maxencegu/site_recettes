@@ -42,6 +42,9 @@ body {
 #entete {
     text-align: center;
 }
+#entete p {
+    text-align: justify;
+}
 #entete h1 {
     text-transform: uppercase;
 }
